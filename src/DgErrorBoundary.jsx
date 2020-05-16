@@ -8,7 +8,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import * as _ from 'lodash';
-import * as exampleActions from './actions/exampleActions';
+import getMembers from './actions/githubActions';
 
 class DgErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class DgErrorBoundary extends React.Component {
     const { error, dispatch } = this.props;
     if (error.serviceError.response) {
       if (error.serviceError.response.status === 401) {
-        dispatch(exampleActions.logout());
+        dispatch(getMembers.logout());
         this.goToLoginPage();
       }
     }

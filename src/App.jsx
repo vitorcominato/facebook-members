@@ -6,14 +6,12 @@ import './App.scss';
 import './assets/styles/utils.scss';
 import Home from './pages/Home/Home';
 
-import PrivateRoute from './routes/PrivateRoute';
 
 const App = ({ user }) => (
   <HashRouter basename={process.env.PUBLIC_URL}>
     <Analytics id="UA-142347341-1" debug>
       <div className="App">
-        <Route user={user} path="/unloggedRoute" exact component={Home} />
-        <PrivateRoute user={user} path="/loggedRoute" exact component={Home} />
+        <Route user={user} path="/" exact component={Home} />
       </div>
     </Analytics>
   </HashRouter>

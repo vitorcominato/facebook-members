@@ -8,7 +8,6 @@ import App from './App';
 import { Store, Persistor } from './Store';
 
 ReactDOM.render(
-  // eslint-disable-next-line react/jsx-filename-extension
   <Provider store={Store}>
     <PersistGate loading={null} persistor={Persistor}>
       <App />

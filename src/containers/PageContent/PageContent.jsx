@@ -7,7 +7,6 @@
  */
 import React, { Children } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-// import MlErrorBoundary from '../../MlErrorBoundary';
 import './PageContent.scss';
 import DgErrorBoundary from '../../DgErrorBoundary';
 
