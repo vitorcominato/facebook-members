@@ -32,7 +32,7 @@ function UserInfo(props) {
   return (
     <div className="user-info" id="user-info">
       <PageContent page="user-info">
-        <Link to="/">Voltar</Link>
+        <Link to="/">Back</Link>
         <Card>
           <CardHeader
             avatar={
