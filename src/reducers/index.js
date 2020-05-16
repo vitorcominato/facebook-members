@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import example from './exampleReducer';
+import gitHubReducer from './gitHub';
 
 export default combineReducers({
-  example,
+  gitHubReducer,
 });

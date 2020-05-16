@@ -1,14 +1,13 @@
 import GitHubApi from '../services/gitHubApi';
 
 export default function getMembers(
-  param1,
-  param2,
   callbackSuccess = () => { }, callbackError = () => { },
 ) {
-  return () => {
-    GitHubApi.getMembers(param1, param2)
+  return (dispatch) => {
+    GitHubApi.getMembers()
       .then((res) => {
-        callbackSuccess(res);
+        dispatch({ type: 'GET_MEMBERS', payload: res });
+        callbackSuccess();
       })
       .catch((error) => {
         callbackError(error);
