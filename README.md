@@ -48,3 +48,9 @@ npm run build
 ## Considerations
 This App was based on a boilerplate of my own in gitlab <a href="https://gitlab.com/vitoramorim/react-boilerplate">See Here</a>
 Thanks for the opportunity :)
+
+
+## Time Spent
+<a href="https://wakatime.com/@f9ae6747-7724-4aaf-864a-3099c946711f/projects/moqufzwywk?start=2020-05-16&end=2020-05-16">
+    See the time spent here
+</a>
