@@ -4,7 +4,7 @@
  *
  *
  */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   ListItem,
@@ -27,6 +27,7 @@ import './Home.scss';
 
 function Home(props) {
   const members = useSelector(state => state.gitHubReducer.members);
+  const [filteredMembers, setFilteredMembers] = useState([]);
   const { history } = props;
   const dispatch = useDispatch();
 
@@ -34,14 +35,25 @@ function Home(props) {
     dispatch(getMembers());
   }, [dispatch]);
 
-  console.log('state', members);
+  useEffect(() => {
+    setFilteredMembers([...members]);
+  }, [members]);
+
+  const searchChangeHandler = (event) => {
+    const search = event.target.value;
+    let aMembers = [...members];
+    aMembers = aMembers.filter(el => el.login.includes(search));
+    setFilteredMembers(aMembers);
+  };
+
   return (
     <div className="Home" id="home">
       <PageContent page="home" history={history}>
         <FormControl>
-          <InputLabel htmlFor="input-with-icon-adornment">With a start adornment</InputLabel>
+          <InputLabel htmlFor="member-search">Type to search for a member</InputLabel>
           <Input
-            id="input-with-icon-adornment"
+            id="member-search"
+            onChange={searchChangeHandler}
             startAdornment={
               (
                 <InputAdornment position="start">
@@ -52,7 +64,7 @@ function Home(props) {
           />
         </FormControl>
         <List>
-          {members && members.map(user => (
+          {filteredMembers && filteredMembers.map(user => (
             <ListItem>
               <ListItemAvatar>
                 <Avatar alt={user.login} src={user.avatar_url}>
@@ -62,7 +74,6 @@ function Home(props) {
               <ListItemText primary={user.login} />
             </ListItem>
           ))}
-
         </List>
       </PageContent>
     </div>
