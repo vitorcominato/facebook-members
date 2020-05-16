@@ -1,0 +1,74 @@
+/* Color palette */
+$primary: #38d8a1;
+$primary-sucess: #39d8a1;
+$secondary: #38acd8;
+$text: #5e6160;
+$text-secondary: #626a68;
+$text-white: #ffffff;
+$background: #f9f9f9;
+$background-button: #c3c7c7;
+$secondary-dark: #35a5cf;
+$card-tag-background: #fcb017;
+$alert: #d0021b;
+$box-shadown: #d2eaf2;
+
+$disabled-input: #d1d5d8;
+$card-border: #d8dde6;
+$table-line: #e0e0e1;
+$link-color: #4a90e2;
+$card-title: $card-tag-background;
+
+/* Calendar */
+$calendar-text: #757575;
+$calendar-text-hover: #e6e6e6;
+
+/* Transition */
+$primary-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+/* Font size */
+$text-xs: 12px;
+$text-xxs: 14px;
+$text-sm: 16px;
+$text-md: 18px;
+$text-lg: 24px;
+$text-xlg: 32px;
+$text-xlgg: 40px;
+$text-xxlg: 48px;
+
+/* Fonts */
+$primary-font: "Hind";
+
+/* box-model */
+$container-width: 1366px;
+
+/* Global Text Mixins */
+
+@mixin text-xs {
+  font-family: $primary-font;
+  font-size: $text-xs;
+  line-height: 17px;
+}
+
+@mixin text-sm {
+  font-family: $primary-font;
+  font-size: $text-sm;
+  line-height: 23px;
+}
+
+@mixin text-md {
+  font-family: $primary-font;
+  font-size: $text-md;
+  line-height: 23px;
+}
+
+@mixin text-lg {
+  font-family: $primary-font;
+  font-size: $text-lg;
+  line-height: 26px;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

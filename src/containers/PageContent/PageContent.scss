@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.PageContent {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: $container-width;
+    padding: 50px 24px 100px;
+    &.no-header {
+      padding-top: 100px;
+    }
+  }
+  &.bg-2 {
+    background: $background;
+  }
+}
