@@ -46,4 +46,5 @@ npm run build
 ```
 
 ## Considerations
+This App was based on a boilerplate of my own in gitlab <a href="https://gitlab.com/vitoramorim/react-boilerplate">See Here</a>
 Thanks for the opportunity :)

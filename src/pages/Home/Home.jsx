@@ -1,6 +1,6 @@
 /**
  *
- * Home
+ * Home Page of application
  *
  *
  */
@@ -38,6 +38,8 @@ function Home() {
     setFilteredMembers([...members]);
   }, [members]);
 
+
+  /** Method thad handles change of input search */
   const searchChangeHandler = (event) => {
     const search = event.target.value;
     let aMembers = [...members];
