@@ -15,7 +15,7 @@ Clone this repository in a folder then:
 npm install
 
 # run application in http://localhost:3000
-npm run dev
+npm run start
 ```
 
 ## How to build
