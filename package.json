@@ -88,7 +88,7 @@
     "ts-pnp": "1.1.5",
     "url-loader": "2.3.0",
     "webpack": "4.41.2",
-    "webpack-dev-server": "3.9.0",
+    "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
   },
@@ -99,13 +99,7 @@
     "lint": "eslint src -c .eslintrc.js --ext js,jsx",
     "lint-fix": "eslint src -c .eslintrc.js --ext js,jsx --fix",
     "start-js": "node scripts/start.js",
-    "build-js": "node scripts/build.js",
-    "start:qa": "SET REACT_APP_STAGE=qa&& npm run start",
-    "build:qa": "SET REACT_APP_STAGE=qa&& npm run build",
-    "start:hm": "SET REACT_APP_STAGE=hm&& npm run start",
-    "build:hm": "SET REACT_APP_STAGE=hm&& npm run build",
-    "start:prod": "SET REACT_APP_STAGE=prod&& npm run start",
-    "build:prod": "SET REACT_APP_STAGE=prod&& npm run build"
+    "build-js": "node scripts/build.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -118,12 +112,8 @@
   ],
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "node-sass": "^4.13.0",
-    "redux-devtools": "^3.5.0",
-    "sass-loader": "^7.1.0"
+    "node-sass": "^4.14.1",
+    "redux-devtools": "^3.5.0"
   },
   "jest": {
     "roots": [
