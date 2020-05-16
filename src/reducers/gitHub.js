@@ -11,10 +11,10 @@ export default function gitHubReducer(state = stateDefault, action) {
         members: action.payload.data,
       };
     }
-    case 'GET_USER': {
+    case 'GET_USER_INFO': {
       return {
         ...state,
-        user: action.payload,
+        user: action.payload.data,
       };
     }
 

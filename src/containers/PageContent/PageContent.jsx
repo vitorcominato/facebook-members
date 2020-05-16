@@ -8,7 +8,6 @@
 import React, { Children } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './PageContent.scss';
-import DgErrorBoundary from '../../DgErrorBoundary';
 
 
 const PageContent = ({
@@ -16,7 +15,6 @@ const PageContent = ({
   children,
   bg,
   className,
-  history,
 }) => {
   const pageContent = (
     <ReactCSSTransitionGroup
@@ -28,9 +26,7 @@ const PageContent = ({
     >
       <div className={`${page} PageContent ${bg}`}>
         <div className={`container ${className !== undefined ? className : ''}`}>
-          <DgErrorBoundary history={history}>
-            {Children.toArray(children)}
-          </DgErrorBoundary>
+          {Children.toArray(children)}
         </div>
       </div>
     </ReactCSSTransitionGroup>
