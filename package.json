@@ -72,7 +72,7 @@
     "react-router-ga": "^1.2.0",
     "react-tippy": "^1.2.3",
     "react-webpack": "^0.4.1",
-    "recharts": "^1.6.1",
+    "recharts": "^2.1.14",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
